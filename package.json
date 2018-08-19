@@ -2,9 +2,11 @@
   "name": "inventory-manager-client",
   "version": "0.1.0",
   "description": "A client for the Inventory Manager software",
-  "main": "main.js",
+  "main": "./src/main.js",
   "scripts": {
-    "start": "electron ./src"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "sass": "node-sass --watch ./src/css -o ./src/css"
   },
   "repository": {
     "type": "git",
@@ -18,10 +20,13 @@
   "homepage": "https://github.com/b2550/Inventory-Manager-Client#readme",
   "devDependencies": {
     "electron": "^2.0.7",
-    "electron-prebuilt-compile": "^2.0.7"
+    "electron-prebuilt-compile": "^2.0.7",
+    "node-sass": "^4.9.3"
   },
   "dependencies": {
-    "electron-rebuild": "^1.8.2",
-    "node-notifier": "^5.2.1"
+    "electron-log": "^2.2.17",
+    "electron-util": "^0.9.0",
+    "node-notifier": "^5.2.1",
+    "usb-barcode-scanner": "^1.0.1"
   }
 }

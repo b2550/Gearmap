@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'"> -->
+  <title>Inventory Manager</title>
+  <script>
+    var link = document.createElement('link')
+    link.setAttribute('rel', 'stylesheet')
+    link.setAttribute('href', require('path').join(__dirname, 'css', 'app.css'))
+    document.head.appendChild(link)
+  </script>
+</head>
+
+<body>
+  <div class="grid-container">
+    <div class="header">
+      <div class="title">
+        <!-- TODO: Grab title from server -->
+        <span>Inventory Manager</span>
+      </div>
+      <div class="control">
+        <svg class="btn" id="close-btn" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/">
+          <clipPath id="_clip1">
+            <rect serif:id="Close" x="0" y="0" width="24" height="24"/>
+          </clipPath>
+          <g clip-path="url(#_clip1)">
+            <path d="M1,1l22,22"/>
+            <path d="M23,1l-22,22"/>
+          </g>
+        </svg>
+        <svg class="btn" id="min-btn" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/">
+          <clipPath id="_clip2">
+            <rect x="0" y="0" width="24" height="24"/>
+          </clipPath>
+          <g clip-path="url(#_clip2)">
+            <path d="M1,12l22,0" />
+          </g>
+        </svg>
+        <svg class="btn" id="max-btn" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/">
+          <clipPath id="_clip3">
+            <rect x="0" y="0" width="24" height="24"/>
+          </clipPath>
+          <g clip-path="url(#_clip3)">
+            <path d="M12,1l0,22" />
+            <path d="M1,12l22,0" />
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="sidebar">
+    </div>
+    <div class="content">
+    </div>
+  </div>
+  <script>
+    // You can also require other files to run in this process
+    require(require('path').join(__dirname, 'renderer', 'renderer.js'))
+  </script>
+</body>
+
+</html>

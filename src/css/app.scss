@@ -1,0 +1,86 @@
+@import 'fonts';
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 0.5fr 1.5fr;
+  grid-template-rows: 48px 1fr;
+  grid-gap: 0;
+  grid-template-areas: ". ." ". content";
+
+  .sidebar {
+    grid-area: 2 / 1 / 4 / 2;
+    background: #ccc;
+  }
+
+  .content {
+    grid-area: content;
+    background: #333;
+  }
+
+  .header {
+    grid-area: 1 / 1 / 2 / 5;
+    background: #555;
+    height: 48px;
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+    cursor: default;
+
+    .control {
+      position: absolute;
+      left: 16px;
+      top: 12px;
+
+      .btn {
+        stroke-width: 1px;
+        height: 24px;
+        fill-rule: evenodd;
+        clip-rule: evenodd;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 1.5;
+        display: inline-block;
+        margin: 0 4px;
+
+        &:hover {
+          opacity: 0.6;
+        }
+
+        &:active {
+          opacity: 1;
+        }
+      }
+
+      #close-btn {
+        stroke-width: 1.2px;
+        stroke: #fd9a9e;
+      }
+
+      #min-btn {
+        stroke: #f8fa6d;
+      }
+
+      #max-btn {
+        stroke: #8bfa85;
+      }
+    }
+
+    .title {
+      position: absolute;
+      left:0;
+      right: 0;
+      top: 0;
+      text-align: center;
+      line-height: 48px;
+      color: white;
+    }
+  }
+}
